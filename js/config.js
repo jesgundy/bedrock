@@ -21,11 +21,6 @@
   }
 }());
 
-// Enable cache-busting:
-if ( typeof REQUIRE_NOCACHE != 'undefined' && REQUIRE_NOCACHE ) {
-  require.urlArgs = "bust="+(new Date()).getTime();
-}
-
 // Require.js Config
 var require = {
   paths: {
@@ -49,3 +44,8 @@ var require = {
     }
   }
 };
+
+// Enable cache-busting:
+if ( typeof REQUIRE_NOCACHE != 'undefined' && REQUIRE_NOCACHE ) {
+  require.urlArgs = "bust="+(new Date()).getTime();
+}

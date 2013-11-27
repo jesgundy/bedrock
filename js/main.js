@@ -30,7 +30,7 @@ define(['detection'], function( detection ) {
   var mods = [];
 
   // Example detection
-  if ( detection.has('.example-class') ) {
+  if ( detection.has('.container') ) {
     mods.push('components/component');
   }
 

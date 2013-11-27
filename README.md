@@ -12,7 +12,7 @@ An HTML boilerplate designed to offer a clean slate to start development, while 
 - [Modernizr](http://modernizr.com)
 - [D3JS](http://d3js.org)
 
-### Notes  
+### Notes
 
 - The sass command you want to run from the root is `sass --watch scss:css`.
 - Consider checking for the most recent version of the included assets
