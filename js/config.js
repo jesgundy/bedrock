@@ -29,7 +29,8 @@ var require = {
       'lib/jquery.min'
     ],
     'underscore': 'lib/underscore',
-    'backbone': 'lib/backbone'
+    'backbone': 'lib/backbone',
+    'd3': 'lib/d3'
   },
   shim: {
     'jquery-cdn': {
