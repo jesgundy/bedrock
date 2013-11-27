@@ -1,0 +1,77 @@
+// Respond Min (http://jakearchibald.github.io/sass-ie/)
+$fix-mqs: false !default;
+@mixin respond-min($width) {
+  @if $fix-mqs {
+    @if $fix-mqs >= $width {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+}
+
+// Old IE (http://jakearchibald.github.io/sass-ie/)
+$old-ie: false !default;
+@mixin old-ie {
+  @if $old-ie {
+    @content;
+  }
+}
+
+// REM Font Size Mixin
+html {
+  font-size: 62.5%;
+}
+@mixin font-size ( $size: 14 ) {
+  font-size: $size + px;
+  font-size: $size/10 + rem;
+}
+body {
+  @include font-size( 14 );
+}
+
+// Image replacement
+@mixin ir {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+// Hide from both screenreaders and browsers
+@mixin hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+// Hide only visually
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+// Hide visually and from screenreaders, but maintain layout
+@mixin invisible {
+  visibility: hidden;
+}
+
+// Clearfix helper / Used to contain floats
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  *zoom: 1;
+}
