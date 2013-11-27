@@ -1,13 +1,10 @@
-# Prototyping Boilerplate
+## Bedrock
 
-A boilerplate, forked from the original [HTML5 Boilerplate](http://html5boilerplate.com), focused on setting up an environment for rapid prototyping.
+An HTML boilerplate designed to offer a clean slate to start development, while leaving out much of the production-level cruft that you don't need yet. Runs on & includes:
 
-## Notes
-
-You may want to consider downloading the latest version of some of the following assets:
-
-- [Normalize](http://necolas.github.io/normalize.css/)
+- [Sass](http://sass-lang.com)
 - [Bourbon](http://bourbon.io)
+- [Normalize](http://necolas.github.io/normalize.css/)
 - [jQuery](http://jquery.com)
 - [Underscore](http://underscorejs.org)
 - [Backbone](http://backbonejs.org)
@@ -15,4 +12,7 @@ You may want to consider downloading the latest version of some of the following
 - [Modernizr](http://modernizr.com)
 - [D3JS](http://d3js.org)
 
-The sass command you want to run from the root is `sass --watch scss:css`.
+### Notes  
+
+- The sass command you want to run from the root is `sass --watch scss:css`.
+- Consider checking for the most recent version of the included assets
