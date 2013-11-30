@@ -26,7 +26,7 @@ var require = {
   paths: {
     'jquery-cdn': [
       '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min',
-      'lib/jquery.min'
+      'lib/jquery'
     ],
     'underscore': 'lib/underscore',
     'backbone': 'lib/backbone',
