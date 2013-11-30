@@ -24,7 +24,7 @@
 // Require.js Config
 var require = {
   paths: {
-    'jquery-cdn': [
+    'jquery-cdn': [ // Note: shimmed libraries need a global jQuery
       '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min',
       'lib/jquery'
     ],
@@ -33,8 +33,13 @@ var require = {
     'd3': 'lib/d3'
   },
   shim: {
+    'underscore' : {
+      init: function() {
+        return _.noConflict();
+      }
+    },
     'backbone': {
-      deps: ['jquery', 'underscore'],
+      deps: ['jquery-cdn', 'underscore'],
       init: function() {
         return Backbone.noConflict();
       }
@@ -45,16 +50,6 @@ var require = {
         var d3export = d3;
         d3 = undefined;
         return d3export;
-      }
-    },
-    'jquery-cdn': {
-      init: function() {
-        return $.noConflict();
-      }
-    },
-    'underscore' : {
-      init: function() {
-        return _.noConflict();
       }
     }
   },
