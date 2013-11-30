@@ -33,9 +33,28 @@ var require = {
     'd3': 'lib/d3'
   },
   shim: {
+    'backbone': {
+      deps: ['jquery', 'underscore'],
+      init: function() {
+        return Backbone.noConflict();
+      }
+    },
+    'd3': {
+      init: function() {
+        // manual noConflict implementation
+        var d3export = d3;
+        d3 = undefined;
+        return d3export;
+      }
+    },
     'jquery-cdn': {
       init: function() {
         return $.noConflict();
+      }
+    },
+    'underscore' : {
+      init: function() {
+        return _.noConflict();
       }
     }
   },
