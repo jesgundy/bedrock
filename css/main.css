@@ -470,6 +470,13 @@ textarea {
   background: #b3d4fc;
   text-shadow: none; }
 
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 .container {
   padding: 0 1em; }
 
