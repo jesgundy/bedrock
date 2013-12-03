@@ -1,7 +1,7 @@
 define([
   'backbone',
   'd3'
-], function( Backbone, bacon ) {
+], function( Backbone, d3 ) {
 
   var Component = Backbone.View.extend({
     initialize: function() {
