@@ -1,16 +1,25 @@
 define([
   'backbone',
-  'd3'
-], function( Backbone, d3 ) {
+  'd3',
+  'jquery',
+  'underscore'
+], function( Backbone, d3, $, _ ) {
+  'use strict';
 
-  var Component = Backbone.View.extend({
-    initialize: function() {
-      console.log('Require & Backbone are working.');
-    }
-  });
+  if (typeof Backbone != undefined) {
+    console.log('Backbone v'+ Backbone.VERSION);
+  };
 
-  new Component();
+  if (typeof d3 != undefined) {
+    console.log('D3 v'+ d3.version);
+  };
 
-  return Component;
+  if (typeof $ != undefined) {
+    console.log('jQuery v'+ $.fn.jquery);
+  };
+
+  if (typeof _ != undefined) {
+    console.log('Underscore v'+ _.VERSION);
+  };
 
 });
