@@ -1,3 +1,25 @@
+// Avoid `console` errors in browsers that lack a console.
+(function() {
+  var method;
+  var noop = function () {};
+  var methods = [
+  'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+  'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+  'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+  'timeStamp', 'trace', 'warn'
+  ];
+  var length = methods.length;
+  var console = (window.console = window.console || {});
+  while (length--) {
+    method = methods[length];
+    // Only stub undefined methods.
+    if (!console[method]) {
+      console[method] = noop;
+    }
+  }
+}());
+
+
 // Vanilla JS tests for detecting HTML elements
 define('detection', function() {
   if (!document.querySelectorAll) {
@@ -12,7 +34,6 @@ define('detection', function() {
       return c;
     };
   }
-
   return {
     // "has()" api: tests for basic CSS selector queries.
     find: function( selector ) {
@@ -24,9 +45,9 @@ define('detection', function() {
   };
 });
 
+
 // Main application bootstrapper
 define(['detection'], function( detection ) {
-
   var mods = [];
 
   // Example detection
@@ -36,5 +57,3 @@ define(['detection'], function( detection ) {
 
   require(mods);
 });
-
-
