@@ -1,10 +1,10 @@
 // Require.js Config
 var require = {
   paths: {
-    'jquery': 'lib/jquery',
-    'underscore': 'lib/underscore',
     'backbone': 'lib/backbone',
     'd3': 'lib/d3',
+    'jquery': 'lib/jquery',
+    'underscore': 'lib/underscore',
 
     'backbone-private': 'lib/private/backbone-private',
     'jquery-private': 'lib/private/jquery-private',
@@ -16,6 +16,7 @@ var require = {
       'jquery': 'jquery-private',
       'underscore': 'underscore-private'
     },
+
     'backbone-private': { 'backbone': 'backbone' },
     'jquery-private': { 'jquery': 'jquery' },
     'underscore-private': { 'underscore': 'underscore' }
