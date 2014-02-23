@@ -52,7 +52,7 @@ define(['detection'], function( detection ) {
 
   // Example detection
   if ( detection.has('.container') ) {
-    mods.push('components/component');
+    mods.push('components/example');
   }
 
   require(mods);
