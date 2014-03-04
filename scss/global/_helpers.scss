@@ -1,0 +1,16 @@
+// Instantiate helper mixins
+.ir {
+  @include ir;
+}
+.hidden {
+  @include hidden;
+}
+.visuallyhidden {
+  @include visuallyhidden;
+}
+.invisible {
+  @include invisible;
+}
+.clearfix {
+  @include clearfix;
+}

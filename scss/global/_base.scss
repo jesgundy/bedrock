@@ -1,29 +1,32 @@
+// Typography & Box-Sizing
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
+  @include font-size(14);
+  font-family: sans-serif;
+  line-height: 1.4;
 }
+
 
 // Layout
 .container {
   padding: 0 1em;
 }
 
-// Instantiate helper mixins
-.ir {
-  @include ir;
+
+// Allow only vertical resizing of textareas.
+textarea {
+  resize: vertical;
 }
-.hidden {
-  @include hidden;
+
+
+// Remove text-shadow, customize the background
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
 }
-.visuallyhidden {
-  @include visuallyhidden;
-}
-.invisible {
-  @include invisible;
-}
-.clearfix {
-  @include clearfix;
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
 }
