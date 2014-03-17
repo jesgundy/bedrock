@@ -3,7 +3,11 @@ var require = {
   paths: {
     'backbone': 'lib/backbone',
     'd3': 'lib/d3',
-    'jquery': 'lib/jquery',
+    'jquery': [
+      // CDN jQuery for production
+      // '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min',
+      'lib/jquery'
+    ],
     'underscore': 'lib/underscore',
 
     'backbone-private': 'lib/private/backbone-private',
