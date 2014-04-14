@@ -1,6 +1,6 @@
 // Instantiate helper mixins
-.ir {
-  @include ir;
+.hide-text {
+  @include hide-text;
 }
 .hidden {
   @include hidden;
