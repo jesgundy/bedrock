@@ -1,8 +1,13 @@
-// Typography & Box-Sizing
+// Box-Sizing
 *,
 *:before,
 *:after {
   @include box-sizing(border-box);
+}
+
+
+// Typography
+body {
   @include font-size(14);
   font-family: sans-serif;
   line-height: 1.4;
