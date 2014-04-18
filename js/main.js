@@ -1,23 +1,24 @@
-// Avoid `console` errors in browsers that lack a console.
-(function() {
-  var method;
-  var noop = function () {};
-  var methods = [
-  'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-  'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-  'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-  'timeStamp', 'trace', 'warn'
-  ];
-  var length = methods.length;
-  var console = (window.console = window.console || {});
-  while (length--) {
-    method = methods[length];
-    // Only stub undefined methods.
-    if (!console[method]) {
-      console[method] = noop;
-    }
-  }
-}());
+// RequireJS Setup
+require.config({
+  paths: {
+    'backbone': 'lib/backbone',
+    'd3': 'lib/d3',
+    'jquery': 'lib/jquery',
+    'underscore': 'lib/underscore'
+  },
+  map: {
+    '*': {
+      'backbone': 'private/backbone',
+      'jquery': 'private/jquery',
+      'underscore': 'private/underscore'
+    },
+
+    'private/backbone': { 'backbone': 'backbone' },
+    'private/jquery': { 'jquery': 'jquery' },
+    'private/underscore': { 'underscore': 'underscore' }
+  },
+  urlArgs: window.REQUIRE_NOCACHE ? "bust="+(new Date()).getTime() : null
+});
 
 
 // Vanilla JS tests for detecting HTML elements
@@ -43,6 +44,18 @@ define('detection', function() {
       return this.find(selector).length > 0;
     }
   };
+});
+
+
+// Privatized Libraries
+define('private/jquery', ['jquery'], function($) {
+  return $.noConflict( true );
+});
+define('private/underscore', ['underscore'], function(_) {
+  return _.noConflict();
+});
+define('private/backbone', ['backbone'], function(Backbone) {
+  return Backbone.noConflict();
 });
 
 

@@ -6,6 +6,8 @@ define([
 ], function( Backbone, d3, $, _ ) {
   'use strict';
 
+  console.log('test');
+
   if (typeof Backbone != undefined) {
     console.log('Backbone v'+ Backbone.VERSION);
   };
