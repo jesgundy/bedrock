@@ -16,6 +16,7 @@ body {
 
 // Layout
 .container {
+  @include font-size(14); // redeclare font-size on top container
   padding: 0 1em;
 }
 
