@@ -3,6 +3,7 @@
 *:before,
 *:after {
   @include box-sizing(border-box);
+  overflow: auto;
 }
 
 
@@ -12,6 +13,31 @@ body,
   @include font-size(14);
   font-family: sans-serif;
   line-height: 1.4;
+}
+
+
+// Links
+a {
+  text-decoration: none;
+
+  &:link {
+    color: blue;
+  }
+
+  &:visited {
+    color: lighten(blue, 10%);
+  }
+
+  &:focus,
+  &:hover {
+    color: darken(blue, 10%);
+    border-bottom: 1px solid darken(blue, 10%);
+  }
+
+  &:active {
+    color: blue;
+    border-bottom: 1px solid blue;
+  }
 }
 
 

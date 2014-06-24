@@ -357,7 +357,8 @@ th {
 html {
   font-size: 62.5%; }
 
-body {
+body,
+.container {
   font-size: 14px;
   font-size: 1.4rem; }
 
@@ -367,10 +368,27 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  overflow: auto; }
+
+body,
+.container {
   font-size: 14px;
   font-size: 1.4rem;
   font-family: sans-serif;
   line-height: 1.4; }
+
+a {
+  text-decoration: none; }
+  a:link {
+    color: blue; }
+  a:visited {
+    color: #3333ff; }
+  a:focus, a:hover {
+    color: #0000cc;
+    border-bottom: 1px solid #0000cc; }
+  a:active {
+    color: blue;
+    border-bottom: 1px solid blue; }
 
 .container {
   padding: 0 1em; }
@@ -425,32 +443,3 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
-.hide-text {
-  color: transparent;
-  font: 0/0 a;
-  text-shadow: none; }
-
-.hidden {
-  display: none !important;
-  visibility: hidden; }
-
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-
-.invisible {
-  visibility: hidden; }
-
-.clearfix {
-  *zoom: 1; }
-  .clearfix:before, .clearfix:after {
-    content: " ";
-    display: table; }
-  .clearfix:after {
-    clear: both; }
