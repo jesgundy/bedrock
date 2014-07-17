@@ -1,8 +1,9 @@
+/*global define, require*/// JSHint global vars
+
 // RequireJS Setup
 require.config({
   paths: {
     "backbone": "lib/backbone",
-    "chai": "lib/chai",
     "d3": "lib/d3",
     "jquery": "lib/jquery",
     "underscore": "lib/underscore"
@@ -23,13 +24,16 @@ require.config({
 
 // Vanilla JS tests for detecting HTML elements
 define("detection", function() {
+  /*jshint -W030 */
   if (!document.querySelectorAll) {
     var d=document, s=d.createStyleSheet();
     d.querySelectorAll = function(r, c, i, j, a) {
       a=d.all, c=[], r = r.replace(/\[for\b/gi, "[htmlFor").split(",");
       for (i=r.length; i--;) {
         s.addRule(r[i], "k:v");
-        for (j=a.length; j--;) a[j].currentStyle.k && c.push(a[j]);
+        for (j=a.length; j--;) {
+          a[j].currentStyle.k && c.push(a[j]);
+        }
         s.removeRule(0);
       }
       return c;
