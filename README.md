@@ -5,7 +5,7 @@ Front-end boilerplate for use with [Codekit 2](http://incident57.com/codekit).
 
 ## Seriously? Another boilerplate?
 
-Yup. It's not for you, it's for me. I'm just sharing it because... well, because that's how we move the web forward.
+It's not for you, it's for me. I'm just sharing it because... well, because that's how we move the web forward.
 
 
 ## Why Codekit?
@@ -28,7 +28,7 @@ Because [@bdkjones](https://github.com/bdkjones) built a really kick-ass tool. I
 
 ## How do I get this thing off the ground?
 
-Download the zip file, and drag it in to Codekit 2. Consider checking for the most recent version of the included libraries. Fin.
+Download the zip file, unzip it, and drag the folder in to Codekit 2. Rename your project. Consider checking for the most recent version of the included libraries. Go forth and build.
 
 
 ## License
