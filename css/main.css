@@ -357,58 +357,55 @@ th {
 html {
   font-size: 62.5%; }
 
-body,
-.container {
-  font-size: 14px;
-  font-size: 1.4rem; }
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
 
 *,
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow: auto; }
+  box-sizing: border-box; }
 
-body,
-.container {
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-family: sans-serif;
-  line-height: 1.4; }
-
-a {
-  text-decoration: none; }
-  a:link {
-    color: blue; }
-  a:visited {
-    color: #3333ff; }
-  a:focus, a:hover {
-    color: #0000cc;
-    border-bottom: 1px solid #0000cc; }
-  a:active {
-    color: blue;
-    border-bottom: 1px solid blue; }
+body {
+  background: white;
+  color: #111111;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.618; }
+  .container {
+    font-size: 14px;
+    font-size: 1.4rem; }
 
 .container {
   padding: 0 1em; }
 
-textarea {
-  resize: vertical; }
+a {
+  color: #111111;
+  text-decoration: none; }
+  a:link, a:visited {
+    border-bottom: 1px solid #111111; }
+    a:link:focus, a:link:hover, a:link:active, a:visited:focus, a:visited:hover, a:visited:active {
+      border-bottom: 3px double #111111; }
 
 ::-moz-selection {
-  background: #b3d4fc;
+  background: rgba(17, 17, 17, 0.25);
   text-shadow: none; }
 
 ::selection {
-  background: #b3d4fc;
+  background: rgba(17, 17, 17, 0.25);
   text-shadow: none; }
 
 @media print {
   * {
     background: transparent !important;
     color: #000 !important;
-    /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
 
@@ -422,8 +419,7 @@ textarea {
     page-break-inside: avoid; }
 
   thead {
-    display: table-header-group;
-    /* h5bp.com/t */ }
+    display: table-header-group; }
 
   tr,
   img {

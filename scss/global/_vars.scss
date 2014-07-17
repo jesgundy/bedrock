@@ -1,0 +1,18 @@
+// Colors
+$colors: (
+  black: #111,
+  white: #fff,
+);
+
+
+// Breakpoints
+$breakpoints: (
+  small: 20em, // includes iPhone portrait
+  medium: 48em, // includes iPad portrait
+  large: 64em, // includes iPad landscape
+);
+
+
+// Font stacks
+$monospace: "Source Code Pro", Monaco, monospace;
+$sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
