@@ -1,6 +1,19 @@
-## Bedrock
+# Bedrock
 
-An HTML boilerplate designed to offer a clean, organized slate to start free-form development, while leaving out much of the production-level cruft that you don't need yet. Runs on & includes:
+Front-end boilerplate for use with [Codekit 2](http://incident57.com/codekit).
+
+
+## Seriously? Another boilerplate?
+
+Yup. It's not for you, it's for me. I'm just sharing it because... well, because that's how we move the web forward.
+
+
+## Why Codekit?
+
+Because [@bdkjones](https://github.com/bdkjones) built a really kick-ass tool. I've played with a handful of different workflows, but nothing quite rivals the breadth of what Codekit can do, and the speed with which it can do it. Until I find something better, that's what Bedrock will work with.
+
+
+## What's inside?
 
 - [Sass](http://sass-lang.com)
 - [Bourbon](http://bourbon.io)
@@ -11,9 +24,13 @@ An HTML boilerplate designed to offer a clean, organized slate to start free-for
 - [RequireJS](http://requirejs.org)
 - [Modernizr](http://modernizr.com)
 - [D3JS](http://d3js.org)
-- [ChaiJS](http://chaijs.com)
 
-### Notes
 
-- The sass command you want to run from the root is `sass --watch scss:css`.
-- Consider checking for the most recent version of the included assets
+### How do I get this thing off the ground?
+
+Download the zip file, and drag it in to Codekit 2. Consider checking for the most recent version of the included libraries. Fin.
+
+
+## License
+
+The MIT License (MIT) Copyright (c) 2014 Jes Gundy
