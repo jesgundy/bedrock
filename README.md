@@ -26,7 +26,7 @@ Because [@bdkjones](https://github.com/bdkjones) built a really kick-ass tool. I
 - [D3JS](http://d3js.org)
 
 
-### How do I get this thing off the ground?
+## How do I get this thing off the ground?
 
 Download the zip file, and drag it in to Codekit 2. Consider checking for the most recent version of the included libraries. Fin.
 
