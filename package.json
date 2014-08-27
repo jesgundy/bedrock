@@ -1,0 +1,19 @@
+{
+  "name": "Bedrock",
+  "version": "0.2.0",
+  "description": "Bedrock - Grunt",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jesgundy/bedrock.git"
+  },
+  "author": "Jes Gundy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jesgundy/bedrock/issues"
+  },
+  "homepage": "https://github.com/jesgundy/bedrock"
+}
