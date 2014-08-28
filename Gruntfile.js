@@ -32,7 +32,14 @@ module.exports = function(grunt) {
           flatten: true,
         }]
       }
-    }
+    },
+
+    watch: {
+      sass: {
+        files: 'scss/**/*.scss',
+        tasks: ['sass'],
+      },
+    },
 
   }); // end config
 
@@ -41,6 +48,7 @@ module.exports = function(grunt) {
   // Load the plugins
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
 
 
@@ -52,7 +60,9 @@ module.exports = function(grunt) {
     grunt.log.writeln('--------------------------');
 
     // List out all of the options to run (automate this later?)\
+    grunt.log.writeln('*sass:* Compiles all styles in the scss/ folder.');
     grunt.log.writeln('*jshint:* Runs JSHint on all component/ js files.');
+    grunt.log.writeln('*watch:* Watches for changes in scss/ folder.');
 
     // space
     grunt.log.write('\n');
