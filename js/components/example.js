@@ -1,4 +1,4 @@
-/*global define*/// JSHint global vars
+
 define([
   "backbone",
   "d3",

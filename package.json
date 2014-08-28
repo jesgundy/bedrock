@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/jesgundy/bedrock/issues"
   },
-  "homepage": "https://github.com/jesgundy/bedrock"
+  "homepage": "https://github.com/jesgundy/bedrock",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-sass": "^0.8.1"
+  }
 }
