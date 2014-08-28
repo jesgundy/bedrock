@@ -39,6 +39,17 @@ module.exports = function(grunt) {
         files: 'scss/**/*.scss',
         tasks: ['sass'],
       },
+    imagemin: {
+      img: {
+        options: {
+          optimizationLevel: 3,
+        },
+        files: [{
+          src: ['img/**/*.{png,jpg,gif}'],
+          expand: true,
+        }]
+      },
+    },
     },
 
   }); // end config
@@ -49,6 +60,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
 
 
 
