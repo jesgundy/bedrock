@@ -19,6 +19,19 @@ module.exports = function(grunt) {
       },
     },
 
+    codekit: {
+      templates: {
+        files: [{
+          expand: true,
+          cwd: 'content/',
+          src: ['*.kit'],
+          flatten: true,
+          dest: '',
+          ext: '.html',
+        }]
+      },
+    },
+
     sass: {
       dist: {
         options: {
@@ -35,13 +48,13 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      kit: {
+        files: ['content/**/*.{kit,html}'],
+        tasks: ['codekit'],
+      },
       sass: {
         files: 'scss/**/*.scss',
         tasks: ['sass'],
-      },
-      kit: {
-        files: ['content/**/*.{kit,html}', 'index.kit'],
-        tasks: ['codekit'],
       },
     },
 
@@ -54,14 +67,6 @@ module.exports = function(grunt) {
           src: ['img/**/*.{png,jpg,gif}'],
           expand: true,
         }]
-      },
-    },
-
-    codekit: {
-      index: {
-        files: {
-          'index.html' : 'index.kit',
-        }
       },
     },
 
@@ -101,15 +106,6 @@ module.exports = function(grunt) {
     grunt.log.write('\n');
   });
 
-
-
-  // JS
-  // grunt.registerTask('jshint', ['jshint']);
-
-
-
-  // Scss
-  // grunt.registerTask('sass', ['sass']);
 
 
 };
