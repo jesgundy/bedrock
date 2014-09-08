@@ -4,6 +4,24 @@ A Front-End Boilerplate and Grunt workflow for building websites.
 
 
 
+## How do I get this thing off the ground?
+
+Assuming you have [Node.js](http://nodejs.org/download/) and [Grunt](http://gruntjs.com/getting-started) installed:
+
+1. Download a zip of the repo
+2. Run `npm install` from root
+3. Run `grunt` to see a list of command options.
+
+
+
+## License
+
+The MIT License (MIT)
+
+Copyright (c) 2014 Jes Gundy
+
+
+
 ## Powered by:
 
 ### Styles
@@ -27,20 +45,3 @@ A Front-End Boilerplate and Grunt workflow for building websites.
 - [Grunt](http://gruntjs.com)
 - [JSHint](http://www.jshint.com)
 - [ImageMin](https://github.com/gruntjs/grunt-contrib-imagemin)
-
-
-## How do I get this thing off the ground?
-
-Assuming you have [Node.js](http://nodejs.org/download/) and [Grunt](http://gruntjs.com/getting-started) installed:
-
-1. Download a zip of the repo
-2. Run `npm install` from root
-3. Run `grunt` to see a list of command options.
-
-
-
-## License
-
-The MIT License (MIT)
-
-Copyright (c) 2014 Jes Gundy
