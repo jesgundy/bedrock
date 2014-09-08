@@ -96,11 +96,11 @@ module.exports = function(grunt) {
     grunt.log.writeln('--------------------');
 
     // List out all of the options to run (automate this later?)\
-    grunt.log.writeln( highlight('sass:')+ ' Compiles all styles in the scss/ folder');
-    grunt.log.writeln( highlight('codekit:')+ ' Compiles index.kit file into index.html');
-    grunt.log.writeln( highlight('watch:')+ ' Watches for changes in scss/ and content/ folders');
-    grunt.log.writeln( highlight('jshint:')+ ' Runs JSHint on all component/ js files');
-    grunt.log.writeln( highlight('imagemin:')+ ' Crushes all jpgs, pngs and gifs in the img/ folder');
+    grunt.log.writeln( highlight('sass: ')+ 'Compiles sass styles into CSS');
+    grunt.log.writeln( highlight('codekit: ')+ 'Compiles kit files into HTML');
+    grunt.log.writeln( highlight('watch: ')+ 'Watches style/content & compiles when changed');
+    grunt.log.writeln( highlight('jshint: ')+ 'Runs JSHint on all component/ js files');
+    grunt.log.writeln( highlight('imagemin: ')+ 'Crushes all jpgs, pngs and gifs in the img/ folder');
 
     // space
     grunt.log.write('\n');
