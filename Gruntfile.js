@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     jshint: {
-      uses_defaults: ['js/components/**/*.js', 'js/components/**/*.js'],
+      uses_defaults: ['js/components/**/*.js'],
       options: {
         curly: true,
         eqeqeq: true,
