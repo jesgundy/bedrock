@@ -1,11 +1,8 @@
 {
   "name": "Bedrock",
-  "version": "0.2.0",
-  "description": "Bedrock - Grunt",
+  "version": "0.3.0",
+  "description": "Bedrock - Gulp",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git@github.com:jesgundy/bedrock.git"
@@ -17,11 +14,10 @@
   },
   "homepage": "https://github.com/jesgundy/bedrock",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-codekit": "^0.4.1",
-    "grunt-contrib-imagemin": "^0.8.1",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-sass": "^0.8.1",
-    "grunt-contrib-watch": "^0.6.1"
+    "gulp": "^3.8.10",
+    "gulp-jshint": "^1.9.0",
+    "gulp-sass": "^1.2.2",
+    "gulp-webserver": "^0.8.6",
+    "jshint-stylish": "^1.0.0"
   }
 }

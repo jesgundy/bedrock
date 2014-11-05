@@ -8,21 +8,11 @@
 
 // Typography
 body {
+  @include font-size(14);
   background: map-get($colors, white);
   color: map-get($colors, black);
   font-family: $sans;
   line-height: golden-ratio(1, 1);
-
-  // chrome doesn't like rems on the body
-  @at-root .container {
-    @include font-size(14);
-  }
-}
-
-
-// Layout
-.container {
-  padding: 0 1em;
 }
 
 
@@ -43,13 +33,3 @@ a {
   }
 }
 
-
-// Customize selection
-::-moz-selection {
-  background: transparentize( map-get($colors, black), 0.75 );
-  text-shadow: none;
-}
-::selection {
-  background: transparentize( map-get($colors, black), 0.75 );
-  text-shadow: none;
-}

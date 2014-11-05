@@ -1,18 +1,13 @@
-
+// Example
 define([
   "backbone",
-  "d3",
   "jquery",
   "underscore"
-], function( Backbone, d3, $, _ ) {
+], function( Backbone, $, _ ) {
   "use strict";
 
   if (typeof Backbone !== undefined) {
     console.log("Backbone v"+ Backbone.VERSION);
-  }
-
-  if (typeof d3 !== undefined) {
-    console.log("D3 v"+ d3.version);
   }
 
   if (typeof $ !== undefined) {
