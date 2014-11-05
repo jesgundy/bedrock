@@ -20,8 +20,8 @@ Assuming you have [Node.js](http://nodejs.org/download/) and [Gulp](https://gith
 
 1. Download a zip of the repo
 2. Run `npm install` from root
-3. Run `gulp` to see a list of command options.
-4. [File a ticket](https://github.com/jesgundy/bedrock/issues) if something isn't working.
+3. Run `gulp` to see a list of command options
+4. [File a ticket](https://github.com/jesgundy/bedrock/issues) if something isn't working
 
 ## License
 
