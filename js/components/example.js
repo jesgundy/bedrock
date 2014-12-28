@@ -1,21 +1,16 @@
-// Example
-define([
-  "backbone",
-  "jquery",
-  "underscore"
-], function( Backbone, $, _ ) {
-  "use strict";
+define(function (require) {
 
-  if (typeof Backbone !== undefined) {
-    console.log("Backbone v"+ Backbone.VERSION);
-  }
 
-  if (typeof $ !== undefined) {
-    console.log("jQuery v"+ $.fn.jquery);
-  }
+  // Dependencies
+  var Backbone = require('backbone'),
+      $ = require('jquery'),
+      _ = require('underscore');
 
-  if (typeof _ !== undefined) {
-    console.log("Underscore v"+ _.VERSION);
-  }
+
+  // Log Libs
+  console.log("Backbone v"+ Backbone.VERSION);
+  console.log("Underscore v"+ _.VERSION);
+  console.log("jQuery v"+ $.fn.jquery);
+
 
 });
