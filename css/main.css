@@ -353,6 +353,9 @@ a {
     a:link:focus, a:link:hover, a:link:active, a:visited:focus, a:visited:hover, a:visited:active {
       border-bottom: 3px double; }
 
+.container {
+  padding: 0 2em; }
+
 @media print {
   * {
     background: transparent !important;
