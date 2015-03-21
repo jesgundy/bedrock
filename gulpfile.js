@@ -1,12 +1,13 @@
 // Plugins
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
-var webserver = require('gulp-webserver');
+var gulp = require('gulp'); // https://github.com/gulpjs/gulp
+var sass = require('gulp-sass'); // https://github.com/dlmanning/gulp-sass
+var jshint = require('gulp-jshint'); // https://github.com/spenceralger/gulp-jshint
+var stylish = require('jshint-stylish'); // https://github.com/sindresorhus/jshint-stylish
+var webserver = require('gulp-webserver'); // https://github.com/schickling/gulp-webserver
 
 
-// JSHint - https://github.com/spenceralger/gulp-jshint) & (https://github.com/sindresorhus/jshint-stylish
+
+// JSHint
 gulp.task('jshint', function() {
   return gulp.src('js/components/**/*.js')
   .pipe( jshint() )
@@ -14,7 +15,8 @@ gulp.task('jshint', function() {
 });
 
 
-// Sass - https://github.com/dlmanning/gulp-sass
+
+// Sass
 gulp.task('sass', function() {
   return gulp.src('css/*.scss')
   .pipe( sass() )
@@ -25,7 +27,8 @@ gulp.task('sass', function() {
 });
 
 
-// Webserver - https://github.com/schickling/gulp-webserver
+
+// Webserver
 gulp.task('webserver', function() {
   gulp.src('.').pipe(webserver({
     host: '0.0.0.0',
@@ -37,11 +40,13 @@ gulp.task('webserver', function() {
 });
 
 
-// Tasks - https://github.com/gulpjs/gulp/blob/master/docs/API.md
+
+// Tasks
 gulp.task('dev', ['sass', 'watch', 'webserver']);
 gulp.task('watch', function() {
   gulp.watch(['css/**/*.scss'], ['sass']);
 });
+
 
 
 // List Commands
