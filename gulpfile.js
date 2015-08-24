@@ -1,58 +1,30 @@
 // Plugins
-var gulp = require('gulp'); // https://github.com/gulpjs/gulp
+var gulp = require('gulp'); // https://github.com/gulpjs/gulp/blob/master/docs/API.md
 var sass = require('gulp-sass'); // https://github.com/dlmanning/gulp-sass
-var jshint = require('gulp-jshint'); // https://github.com/spenceralger/gulp-jshint
-var stylish = require('jshint-stylish'); // https://github.com/sindresorhus/jshint-stylish
-var webserver = require('gulp-webserver'); // https://github.com/schickling/gulp-webserver
-
-
-
-// JSHint
-gulp.task('jshint', function() {
-  return gulp.src('js/components/**/*.js')
-  .pipe( jshint() )
-  .pipe( jshint.reporter(stylish) );
-});
+var sourcemaps = require('gulp-sourcemaps'); // https://github.com/floridoo/gulp-sourcemaps
 
 
 
 // Sass
 gulp.task('sass', function() {
-  return gulp.src('css/*.scss')
-  .pipe( sass() )
-  .on('error', function(err) {
-    console.log( err.message );
-  })
-  .pipe( gulp.dest('css/') );
+  return gulp.src('scss/main.scss')
+    .pipe( sourcemaps.init() )
+    .pipe( sass({errLogToConsole: true}) )
+    .pipe( sourcemaps.write() )
+    .pipe( gulp.dest('css') );
 });
 
 
 
-// Webserver
-gulp.task('webserver', function() {
-  gulp.src('.').pipe(webserver({
-    host: '0.0.0.0',
-    port: '8080',
-    livereload: true,
-    directoryListing: false,
-    open: false
-  }));
-});
-
-
-
-// Tasks
-gulp.task('dev', ['sass', 'watch', 'webserver']);
-gulp.task('watch', function() {
-  gulp.watch(['css/**/*.scss'], ['sass']);
+// Watch Sass
+gulp.task('watch', ['sass'], function() {
+  gulp.watch(['scss/**/*.scss'], ['sass']);
 });
 
 
 
 // List Commands
 gulp.task('default', function() {
-  // Highlight Function
-  function highlight(text) { return '\033[0;36m'+ text +'\033[0m'; }
 
   // Heading
   console.log('\n');
@@ -60,11 +32,8 @@ gulp.task('default', function() {
   console.log('----------');
 
   // List
-  console.log( highlight('dev ')+ '[sass, watch, webserver]');
-  console.log( highlight('watch ')+ '[sass]');
-  console.log( highlight('sass') );
-  console.log( highlight('jshint') );
-  console.log( highlight('webserver') );
+  console.log('watch: watch for changes to sass');
+  console.log('sass: generate stylesheets');
 
   // Space
   console.log('\n');
