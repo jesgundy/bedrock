@@ -9,13 +9,16 @@ require.config({
 });
 
 
-// Main application bootstrapper
-define(function() {
-  var mods = [];
 
+// Bootstrapper
+define(function() {
+  var modules = [];
+
+  // Push modules
   if (!!document.querySelectorAll('.container').length) {
-    mods.push("components/example");
+    modules.push("modules/module");
   }
 
-  require(mods);
+  // Require modules
+  require(modules);
 });
