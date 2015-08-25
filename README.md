@@ -3,15 +3,15 @@
 A Front-End Boilerplate and Gulp workflow. Runs on:
 
 - [Gulp](http://gulpjs.com)
+- [RequireJS](http://requirejs.org)
 - [Backbone](http://backbonejs.org)
 - [Underscore](http://underscorejs.org)
-- [RequireJS](http://requirejs.org)
-- [Modernizr](http://modernizr.com)
 - [jQuery](http://jquery.com)
-- [JSHint](http://www.jshint.com)
+- [Modernizr](http://modernizr.com)
 - [Normalize](http://necolas.github.io/normalize.css/)
 - [Sass](http://sass-lang.com)
 - [Bourbon](http://bourbon.io)
+- [Bitters](http://bitters.bourbon.io/)
 
 
 ## How do I use it
